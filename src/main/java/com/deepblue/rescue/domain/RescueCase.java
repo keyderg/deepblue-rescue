@@ -28,7 +28,6 @@ public class RescueCase {
     @JoinColumn(name = "rescue_center_id", nullable = false)
     private RescueCenter rescueCenter;
 
-    // --- NUEVO: relación 1:1 con Animal ---
     @OneToOne(
             mappedBy = "rescueCase",
             cascade = CascadeType.ALL,
@@ -38,7 +37,6 @@ public class RescueCase {
     private Animal animal;
 
     protected RescueCase() {
-        // requerido por JPA
     }
 
     public RescueCase(String caseCode, LocalDate rescueDate, String rescueLocation, RescueStatus status) {

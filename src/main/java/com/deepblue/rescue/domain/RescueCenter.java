@@ -25,7 +25,6 @@ public class RescueCenter {
     private List<RescueCase> cases = new ArrayList<>();
 
     protected RescueCenter() {
-        // requerido por JPA
     }
 
     public RescueCenter(String code, String name, String city) {
